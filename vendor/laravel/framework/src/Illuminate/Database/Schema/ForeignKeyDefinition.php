@@ -25,6 +25,26 @@ class ForeignKeyDefinition extends Fluent
     }
 
     /**
+     * Indicate that updates should be restricted.
+     *
+     * @return $this
+     */
+    public function restrictOnUpdate()
+    {
+        return $this->onUpdate('restrict');
+    }
+
+    /**
+     * Indicate that updates should have "no action".
+     *
+     * @return $this
+     */
+    public function noActionOnUpdate()
+    {
+        return $this->onUpdate('no action');
+    }
+
+    /**
      * Indicate that deletes should cascade.
      *
      * @return $this
@@ -35,6 +55,16 @@ class ForeignKeyDefinition extends Fluent
     }
 
     /**
+     * Indicate that deletes should be restricted.
+     *
+     * @return $this
+     */
+    public function restrictOnDelete()
+    {
+        return $this->onDelete('restrict');
+    }
+
+    /**
      * Indicate that deletes should set the foreign key value to null.
      *
      * @return $this
@@ -42,5 +72,15 @@ class ForeignKeyDefinition extends Fluent
     public function nullOnDelete()
     {
         return $this->onDelete('set null');
+    }
+
+    /**
+     * Indicate that deletes should have "no action".
+     *
+     * @return $this
+     */
+    public function noActionOnDelete()
+    {
+        return $this->onDelete('no action');
     }
 }

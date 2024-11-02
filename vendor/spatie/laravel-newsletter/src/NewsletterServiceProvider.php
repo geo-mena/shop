@@ -2,44 +2,39 @@
 
 namespace Spatie\Newsletter;
 
-use DrewM\MailChimp\MailChimp;
-use Illuminate\Support\ServiceProvider;
-use Spatie\Newsletter\NewsletterPermissions;
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Spatie\Newsletter\Drivers\Driver;
+use Spatie\Newsletter\Drivers\NullDriver;
+use Spatie\Newsletter\Support\Lists;
 
-class NewsletterServiceProvider extends ServiceProvider
+class NewsletterServiceProvider extends PackageServiceProvider
 {
-    protected $defer = false;
-
-    public function boot()
+    public function configurePackage(Package $package): void
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/newsletter.php', 'newsletter');
-
-        $this->publishes([
-            __DIR__.'/../config/newsletter.php' => config_path('newsletter.php'),
-        ]);
+        $package
+            ->name('laravel-newsletter')
+            ->hasConfigFile();
     }
 
-    public function register()
+    public function bootingPackage()
     {
-        $this->app->singleton(Newsletter::class, function () {
-            $driver = config('newsletter.driver', 'api');
-            if (is_null($driver) || $driver === 'log') {
-                return new NullDriver($driver === 'log');
+        $this->app->singleton('newsletter', function () {
+            /** @var class-string<Driver> $driverClass */
+            $driverClass = config('newsletter.driver');
+
+            if (
+                is_null($driverClass)
+                || $driverClass === 'log'
+                || $driverClass === NullDriver::class
+            ) {
+                return new NullDriver($driverClass === 'log');
             }
 
-            $mailChimp = new Mailchimp(config('newsletter.apiKey'));
+            $arguments = config('newsletter.driver_arguments');
+            $lists = Lists::createFromConfig(config('newsletter'));
 
-            $mailChimp->verify_ssl = config('newsletter.ssl', true);
-
-            $configuredLists = NewsletterListCollection::createFromConfig(config('newsletter'));
-
-            return new Newsletter($mailChimp, $configuredLists);
+            return $driverClass::make($arguments, $lists);
         });
-
-        $this->app->alias(Newsletter::class, 'newsletter');
-
-        $this->commands([
-            NewsletterPermissions::class,
-        ]);
     }
 }

@@ -2,3 +2,9 @@
 /.idea
 .env
 composer.lock
+/build
+*-container*
+*.phpunit*
+test.php
+/.venv
+/docs/build

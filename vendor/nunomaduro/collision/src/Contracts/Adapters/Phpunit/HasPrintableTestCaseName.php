@@ -1,13 +1,6 @@
 <?php
 
-/**
- * This file is part of Collision.
- *
- * (c) Nuno Maduro <enunomaduro@gmail.com>
- *
- *  For the full copyright and license information, please view the LICENSE
- *  file that was distributed with this source code.
- */
+declare(strict_types=1);
 
 namespace NunoMaduro\Collision\Contracts\Adapters\Phpunit;
 
@@ -17,7 +10,17 @@ namespace NunoMaduro\Collision\Contracts\Adapters\Phpunit;
 interface HasPrintableTestCaseName
 {
     /**
-     * Returns the test case name that should be used by the printer.
+     * The printable test case name.
      */
-    public function getPrintableTestCaseName(): string;
+    public static function getPrintableTestCaseName(): string;
+
+    /**
+     * The printable test case method name.
+     */
+    public function getPrintableTestCaseMethodName(): string;
+
+    /**
+     * The "latest" printable test case method name.
+     */
+    public static function getLatestPrintableTestCaseMethodName(): string;
 }

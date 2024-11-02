@@ -14,25 +14,31 @@
         }
     ],
     "require": {
-        "php": "^7.2.5 || ^8.0",
-        "facade/ignition-contracts": "^1.0",
-        "filp/whoops": "^2.4",
-        "symfony/console": "^5.0"
+        "php": "^8.1.0",
+        "filp/whoops": "^2.16.0",
+        "nunomaduro/termwind": "^1.15.1",
+        "symfony/console": "^6.4.12"
+    },
+    "conflict": {
+        "laravel/framework": ">=11.0.0"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^2.16",
-        "facade/ignition": "^2.0",
-        "fideloper/proxy": "^4.2",
-        "fruitcake/laravel-cors": "^1.0",
-        "laravel/framework": "^7.0",
-        "laravel/tinker": "^2.0",
-        "nunomaduro/larastan": "^0.6",
-        "orchestra/testbench": "^5.0",
-        "phpstan/phpstan": "^0.12.3",
-        "phpunit/phpunit": "^8.5.1 || ^9.0"
+        "brianium/paratest": "^7.3.1",
+        "laravel/framework": "^10.48.22",
+        "laravel/pint": "^1.18.1",
+        "laravel/sail": "^1.36.0",
+        "laravel/sanctum": "^3.3.3",
+        "laravel/tinker": "^2.10.0",
+        "nunomaduro/larastan": "^2.9.8",
+        "orchestra/testbench-core": "^8.28.3",
+        "pestphp/pest": "^2.35.1",
+        "phpunit/phpunit": "^10.5.36",
+        "sebastian/environment": "^6.1.0",
+        "spatie/laravel-ignition": "^2.8.0"
     },
     "autoload-dev": {
         "psr-4": {
+            "Tests\\Printer\\": "tests/Printer",
             "Tests\\Unit\\": "tests/Unit",
             "Tests\\FakeProgram\\": "tests/FakeProgram",
             "Tests\\": "tests/LaravelApp/tests",
@@ -44,11 +50,17 @@
     "autoload": {
         "psr-4": {
             "NunoMaduro\\Collision\\": "src/"
-        }
+        },
+        "files": [
+            "./src/Adapters/Phpunit/Autoload.php"
+        ]
     },
     "config": {
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     },
     "extra": {
         "laravel": {
@@ -58,14 +70,22 @@
         }
     },
     "scripts": {
-        "lint": "php-cs-fixer fix -v",
+        "lint": "pint -v",
+        "test:lint": "pint --test -v",
         "test:types": "phpstan analyse --ansi",
-        "test:unit": "phpunit --colors=always",
-        "test:lint": "php-cs-fixer fix -v --dry-run",
+        "test:unit:phpunit": [
+            "@putenv XDEBUG_MODE=coverage",
+            "phpunit --colors=always"
+        ],
+        "test:unit:pest": [
+            "@putenv XDEBUG_MODE=coverage",
+            "pest --colors=always -v"
+        ],
         "test": [
             "@test:lint",
-            "@test:unit",
-            "@test:types"
+            "@test:types",
+            "@test:unit:phpunit",
+            "@test:unit:pest"
         ]
     }
 }

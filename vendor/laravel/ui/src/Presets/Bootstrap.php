@@ -14,7 +14,7 @@ class Bootstrap extends Preset
     public static function install()
     {
         static::updatePackages();
-        static::updateWebpackConfiguration();
+        static::updateViteConfiguration();
         static::updateSass();
         static::updateBootstrapping();
         static::removeNodeModules();
@@ -29,22 +29,20 @@ class Bootstrap extends Preset
     protected static function updatePackageArray(array $packages)
     {
         return [
-            'bootstrap' => '^4.0.0',
-            'jquery' => '^3.2',
-            'popper.js' => '^1.12',
-            'sass' => '^1.15.2',
-            'sass-loader' => '^8.0.0',
+            'bootstrap' => '^5.2.3',
+            '@popperjs/core' => '^2.11.6',
+            'sass' => '^1.56.1',
         ] + $packages;
     }
 
     /**
-     * Update the Webpack configuration.
+     * Update the Vite configuration.
      *
      * @return void
      */
-    protected static function updateWebpackConfiguration()
+    protected static function updateViteConfiguration()
     {
-        copy(__DIR__.'/bootstrap-stubs/webpack.mix.js', base_path('webpack.mix.js'));
+        copy(__DIR__.'/bootstrap-stubs/vite.config.js', base_path('vite.config.js'));
     }
 
     /**

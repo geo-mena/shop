@@ -16,3 +16,20 @@ checks:
         fix_line_ending: true
         fix_identation_4spaces: true
         fix_doc_comments: true
+
+build:
+  nodes:
+    analysis:
+      tests:
+        override:
+        - php-scrutinizer-run
+  environment:
+      php:
+          version: 8.1.13 
+  tests:
+      override:
+      -
+          command: 'vendor/bin/phpunit --coverage-clover=build/logs/clover.xml'
+          coverage:
+              file: 'build/logs/clover.xml'
+              format: 'clover'
