@@ -27,6 +27,7 @@ COPY . .
 # Instalar dependencias
 RUN composer install --no-scripts --optimize-autoloader
 RUN npm install
+RUN npm run dev
 
 # Limpiar y regenerar caches
 RUN php artisan storage:link
