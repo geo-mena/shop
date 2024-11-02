@@ -35,20 +35,19 @@ COPY . .
 # Generar autoload de composer
 RUN composer dump-autoload --optimize
 
-# Optimizaciones para producción (solo cache de configuración y vistas)
-RUN php artisan config:cache \
-    && php artisan view:cache
+# Limpiar y regenerar caches
+RUN php artisan cache:clear && \
+    php artisan config:clear && \
+    php artisan view:clear && \
+    php artisan route:clear && \
+    php artisan config:cache && \
+    php artisan view:cache
 
 # Configurar permisos
 RUN chmod -R 777 storage bootstrap/cache
 
 # Exponer puerto
-EXPOSE 8080
-
-# Script de inicio
-COPY docker-entrypoint.sh /usr/local/bin/
-RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+EXPOSE 8000
 
 # Comando para iniciar el servidor
-ENTRYPOINT ["docker-entrypoint.sh"]
 CMD php artisan serve --host=0.0.0.0 --port=$PORT
