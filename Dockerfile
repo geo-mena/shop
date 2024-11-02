@@ -35,8 +35,8 @@ COPY . .
 # Generar autoload de composer
 RUN composer dump-autoload --optimize
 
-# Compilar assets
-RUN npm run prod
+# # Compilar assets
+# RUN npm run prod
 
 # Optimizaciones para producción
 RUN php artisan config:cache \
