@@ -1,0 +1,29 @@
+{
+    "services": [
+        {
+            "name": "web",
+            "env": "docker",
+            "dockerfilePath": "./Dockerfile",
+            "buildCommand": "docker build -t ecommerce-app .",
+            "startCommand": "docker run -p $PORT:80 ecommerce-app"
+        },
+        {
+            "name": "scheduler",
+            "env": "docker",
+            "dockerfilePath": "./Dockerfile",
+            "buildCommand": "docker build -t ecommerce-app .",
+            "startCommand": "docker run ecommerce-app php artisan schedule:work"
+        }
+    ],
+    "environments": {
+        "production": {
+            "web": {
+                "commands": [
+                    "php artisan config:cache",
+                    "php artisan route:cache",
+                    "php artisan view:cache"
+                ]
+            }
+        }
+    }
+}

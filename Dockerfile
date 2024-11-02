@@ -19,50 +19,26 @@ RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Establecer directorio de trabajo
-WORKDIR /app
+WORKDIR /var/www/html
 
-# Copiar archivos de composer
-COPY composer.json composer.lock ./
-RUN composer install --no-scripts --no-autoloader
-
-# Copiar archivos de npm
-COPY package.json package-lock.json ./
-RUN npm install
-
-# Copiar el resto de la aplicación
+# Copiar archivos del proyecto
 COPY . .
 
-# Generar autoload de composer
-RUN composer dump-autoload --optimize
+# Instalar dependencias
+RUN composer install --no-scripts --optimize-autoloader
+RUN npm install
+RUN npm run build
 
 # Limpiar y regenerar caches
-RUN php artisan cache:clear && \
-    php artisan config:clear && \
-    php artisan view:clear && \
-    php artisan route:clear && \
-    php artisan config:cache && \
-    php artisan view:cache
+RUN php artisan storage:link
+RUN php artisan cache:clear
+RUN php artisan config:clear
+RUN php artisan view:clear
+RUN php artisan route:clear
 
 # Configurar permisos
 RUN chmod -R 777 storage bootstrap/cache
 
-# Exponer puerto
 EXPOSE 80
 
-# Script de inicio
-COPY <<'EOF' /app/start.sh
-#!/bin/sh
-set -e
-
-# Convertir PORT a número entero
-PORT=${PORT:-80}
-PORT=$(($PORT + 0))
-
-# Iniciar el servidor con el puerto como número
-exec php artisan serve --host=0.0.0.0 --port=$PORT
-EOF
-
-RUN chmod +x /app/start.sh
-
-# Comando para iniciar el servidor
-ENTRYPOINT ["/app/start.sh"]
+CMD php artisan serve --host=0.0.0.0 --port=$PORT
