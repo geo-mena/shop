@@ -47,7 +47,7 @@ RUN php artisan cache:clear && \
 RUN chmod -R 777 storage bootstrap/cache
 
 # Exponer puerto
-EXPOSE 8000
+EXPOSE 8080
 
 # Comando para iniciar el servidor
 CMD php artisan serve --host=0.0.0.0 --port=$PORT
