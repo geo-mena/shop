@@ -1,12 +1,8 @@
 [build]
 builder = "nixpacks"
-buildCommand = "docker build -t myapp ."
 
 [deploy]
-startCommand = "docker run myapp"
-healthcheckPath = "/"
-healthcheckTimeout = 100
-restartPolicyType = "on-failure"
+startCommand = "php artisan serve --host=0.0.0.0 --port=$PORT"
 
 [env]
 PORT = "8080"
