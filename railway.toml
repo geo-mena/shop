@@ -5,4 +5,4 @@ builder = "nixpacks"
 startCommand = "php artisan serve --host=0.0.0.0 --port=$PORT"
 
 [env]
-PORT = "8080"
+PORT = "8000"
