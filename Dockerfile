@@ -50,4 +50,4 @@ RUN chmod -R 777 storage bootstrap/cache
 EXPOSE 8080
 
 # Comando para iniciar el servidor
-CMD php artisan serve --host=0.0.0.0 --port=$PORT
+CMD php artisan serve --host=0.0.0.0 --port=${PORT:-8080}

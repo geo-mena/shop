@@ -1,0 +1,12 @@
+[build]
+builder = "nixpacks"
+buildCommand = "docker build -t myapp ."
+
+[deploy]
+startCommand = "docker run myapp"
+healthcheckPath = "/"
+healthcheckTimeout = 100
+restartPolicyType = "on-failure"
+
+[env]
+PORT = "8080"
