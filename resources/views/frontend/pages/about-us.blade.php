@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 
-@section('title','Ecommerce Laravel || About Us')
+@section('title','Shop Eiteck | About Us')
 
 @section('main-content')
 

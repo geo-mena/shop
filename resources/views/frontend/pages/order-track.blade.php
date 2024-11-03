@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 
-@section('title','Ecommerce Laravel || Order Track Page')
+@section('title','Shop Eiteck | Order Track Page')
 
 @section('main-content')
     <!-- Breadcrumbs -->

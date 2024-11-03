@@ -1,6 +1,6 @@
 @extends('backend.layouts.master')
 
-@section('title','Ecommerce Laravel || Banner Create')
+@section('title','Shop Eiteck | Banner Create')
 
 @section('main-content')
 
