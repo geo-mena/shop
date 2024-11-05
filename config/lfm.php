@@ -17,8 +17,6 @@ return [
 
     'use_package_routes'       => true,
 
-    'url_prefix' => '/laravel-filemanager', 
-
     /*
     |--------------------------------------------------------------------------
     | Shared folder / Private folder
