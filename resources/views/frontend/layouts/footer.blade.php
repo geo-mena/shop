@@ -74,7 +74,7 @@
 					<div class="row">
 						<div class="col-lg-6 col-12">
 							<div class="left">
-								<p>© {{date('Y')}} Developed By Prajwal Rai  -  All Rights Reserved.</p>
+								<p>© {{date('Y')}} Developed By Geovanni Mena  -  All Rights Reserved.</p>
 							</div>
 						</div>
 						<div class="col-lg-6 col-12">

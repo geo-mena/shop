@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 
-@section('title','Ecommerce Laravel || Blog Page')
+@section('title','Shop Eiteck | Blog Page')
 
 @section('main-content')
     <!-- Breadcrumbs -->
