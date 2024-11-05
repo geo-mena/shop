@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+
 class UsersTableSeeder extends Seeder
 {
     /**
@@ -12,20 +13,20 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        $data=array(
+        $data = array(
             array(
-                'name'=>'Geovanni Mena',
-                'email'=>'admin@mail.com',
-                'password'=>Hash::make('codeastro.com'),
-                'role'=>'admin',
-                'status'=>'active'
+                'name' => 'Geovanni Mena',
+                'email' => 'admin@mail.com',
+                'password' => Hash::make('admin123/*'),
+                'role' => 'admin',
+                'status' => 'active'
             ),
             array(
-                'name'=>'Customer A',
-                'email'=>'customer@mail.com',
-                'password'=>Hash::make('codeastro.com'),
-                'role'=>'user',
-                'status'=>'active'
+                'name' => 'Customer A',
+                'email' => 'customer@mail.com',
+                'password' => Hash::make('customer123/*'),
+                'role' => 'user',
+                'status' => 'active'
             ),
         );
 
