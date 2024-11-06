@@ -1,27 +1,29 @@
 {
-    "services": [
-        {
+    "services": {
+        "web": {
             "name": "web",
             "env": "docker",
             "dockerfilePath": "./Dockerfile",
             "buildCommand": "docker build -t ecommerce-app .",
-            "startCommand": "docker run -p $PORT:80 ecommerce-app"
+            "startCommand": "docker run -p $PORT:80 -v storage_volume:/var/www/html/storage/backup ecommerce-app"
         },
-        {
+        "scheduler": {
             "name": "scheduler",
             "env": "docker",
             "dockerfilePath": "./Dockerfile",
             "buildCommand": "docker build -t ecommerce-app .",
-            "startCommand": "docker run ecommerce-app php artisan schedule:work"
+            "startCommand": "docker run -v storage_volume:/var/www/html/storage/backup ecommerce-app php artisan schedule:work"
         }
-    ],
+    },
     "environments": {
         "production": {
             "web": {
                 "commands": [
+                    "/usr/local/bin/backup-script.sh",
                     "php artisan config:cache",
                     "php artisan route:cache",
-                    "php artisan view:cache"
+                    "php artisan view:cache",
+                    "/usr/local/bin/restore-script.sh"
                 ]
             }
         }

@@ -21,6 +21,12 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Establecer directorio de trabajo
 WORKDIR /var/www/html
 
+# Copiar scripts de backup
+COPY backup-script.sh /usr/local/bin/backup-script.sh
+COPY restore-script.sh /usr/local/bin/restore-script.sh
+RUN chmod +x /usr/local/bin/backup-script.sh
+RUN chmod +x /usr/local/bin/restore-script.sh
+
 # Copiar archivos del proyecto
 COPY . .
 
@@ -41,4 +47,7 @@ RUN chmod -R 777 storage bootstrap/cache
 
 EXPOSE 80
 
-CMD php artisan serve --host=0.0.0.0 --port=$PORT
+# Modificar el CMD para incluir el backup y restore
+CMD /usr/local/bin/backup-script.sh && \
+    /usr/local/bin/restore-script.sh && \
+    php artisan serve --host=0.0.0.0 --port=$PORT
