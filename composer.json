@@ -12,6 +12,7 @@
         "barryvdh/laravel-dompdf": "^2.0",
         "guzzlehttp/guzzle": "^7.0",
         "intervention/image": "^2.7",
+        "jrm2k6/cloudder": "^0.7.0",
         "laravel/framework": "^10.0",
         "laravel/socialite": "^5.0",
         "laravel/tinker": "^2.0",

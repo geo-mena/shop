@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b32fdcfd6c863458a361d0bd824efa95",
+    "content-hash": "a456eeb7084ef942b2c3c5e273a18a9a",
     "packages": [
         {
             "name": "barryvdh/laravel-dompdf",
@@ -211,6 +211,64 @@
                 }
             ],
             "time": "2023-12-11T17:09:12+00:00"
+        },
+        {
+            "name": "cloudinary/cloudinary_php",
+            "version": "1.20.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cloudinary/cloudinary_php.git",
+                "reference": "c5d2eb500a92802ef958f8bb36d81af07fb3f6f7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cloudinary/cloudinary_php/zipball/c5d2eb500a92802ef958f8bb36d81af07fb3f6f7",
+                "reference": "c5d2eb500a92802ef958f8bb36d81af07fb3f6f7",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "ext-zip": "*",
+                "phpunit/phpunit": "4.8.*"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/Helpers.php"
+                ],
+                "classmap": [
+                    "src"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cloudinary",
+                    "homepage": "https://github.com/cloudinary/cloudinary_php/graphs/contributors"
+                }
+            ],
+            "description": "Cloudinary PHP SDK",
+            "homepage": "https://github.com/cloudinary/cloudinary_php",
+            "keywords": [
+                "cdn",
+                "cloud",
+                "cloudinary",
+                "image management",
+                "sdk"
+            ],
+            "support": {
+                "email": "info@cloudinary.com",
+                "issues": "https://github.com/cloudinary/cloudinary_php/issues",
+                "source": "https://github.com/cloudinary/cloudinary_php/tree/1.20.2"
+            },
+            "time": "2023-02-09T18:55:50+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -1339,6 +1397,72 @@
                 }
             ],
             "time": "2022-05-21T17:30:32+00:00"
+        },
+        {
+            "name": "jrm2k6/cloudder",
+            "version": "0.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jrm2k6/cloudder.git",
+                "reference": "d54a7cd7c880705ae565dcc078a6f81320f21b05"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jrm2k6/cloudder/zipball/d54a7cd7c880705ae565dcc078a6f81320f21b05",
+                "reference": "d54a7cd7c880705ae565dcc078a6f81320f21b05",
+                "shasum": ""
+            },
+            "require": {
+                "cloudinary/cloudinary_php": "^1.1",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "laravel/framework": ">=5.0",
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "JD\\Cloudder\\CloudderServiceProvider"
+                    ],
+                    "aliases": {
+                        "Cloudder": "JD\\Cloudder\\Facades\\Cloudder"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "JD\\Cloudder": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeremy Dagorn",
+                    "email": "jeremy.dagorn@gmail.com"
+                }
+            ],
+            "description": "Cloudinary API wrapper for Laravel",
+            "homepage": "https://github.com/jrm2k6/cloudder",
+            "keywords": [
+                "api",
+                "cloudinary",
+                "image",
+                "laravel",
+                "laravel4",
+                "upload"
+            ],
+            "support": {
+                "issues": "https://github.com/jrm2k6/cloudder/issues",
+                "source": "https://github.com/jrm2k6/cloudder/tree/0.7.0"
+            },
+            "abandoned": true,
+            "time": "2021-02-04T04:53:27+00:00"
         },
         {
             "name": "laravel/framework",
