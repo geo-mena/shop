@@ -24,20 +24,19 @@ WORKDIR /var/www/html
 # Copiar archivos del proyecto
 COPY . .
 
+# Crear directorios de storage antes de cualquier operación
+RUN mkdir -p storage/framework/sessions \
+    && mkdir -p storage/framework/views \
+    && mkdir -p storage/framework/cache \
+    && mkdir -p storage/logs
+
 # Instalar dependencias
 RUN composer install --no-scripts --optimize-autoloader
 RUN npm install
 RUN npm run dev
 
-# Añade estas líneas ANTES de RUN php artisan storage:link
-RUN mkdir -p /var/www/html/storage/framework/sessions \
-    && mkdir -p /var/www/html/storage/framework/views \
-    && mkdir -p /var/www/html/storage/framework/cache \
-    && mkdir -p /var/www/html/storage/logs
-
 # Configurar permisos
-RUN chmod -R 777 /var/www/html/storage
-RUN chown -R www-data:www-data /var/www/html/storage
+RUN chmod -R 777 storage bootstrap/cache
 
 # Configurar enlace simbólico de storage
 RUN php artisan storage:link
@@ -48,9 +47,6 @@ RUN php artisan cache:clear
 RUN php artisan config:clear
 RUN php artisan view:clear
 RUN php artisan route:clear
-
-# Configurar permisos
-RUN chmod -R 777 storage bootstrap/cache
 
 EXPOSE 80
 
