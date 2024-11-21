@@ -41,6 +41,8 @@ RUN php artisan route:clear
 
 # Configurar permisos
 RUN chmod -R 777 storage bootstrap/cache
+RUN chmod -R 775 /var/www/html/storage
+RUN chown -R www-data:www-data /var/www/html/storage
 
 EXPOSE 80
 
