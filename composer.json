@@ -17,6 +17,7 @@
         "laravel/socialite": "^5.0",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^4.0",
+        "predis/predis": "^2.3",
         "pusher/pusher-php-server": "^7.0",
         "spatie/laravel-newsletter": "^5.0",
         "srmklive/paypal": "^3.0",

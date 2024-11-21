@@ -13,7 +13,9 @@ RUN apt-get update && apt-get install -y \
     npm
 
 # Instalar extensiones PHP
-RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
+RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd \
+    && pecl install redis \
+    && docker-php-ext-enable redis
 
 # Instalar Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
@@ -25,6 +27,7 @@ WORKDIR /var/www/html
 COPY . .
 
 # Instalar dependencias
+RUN composer require predis/predis
 RUN composer install --no-scripts --optimize-autoloader
 RUN npm install
 RUN npm run dev
