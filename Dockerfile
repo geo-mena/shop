@@ -21,12 +21,6 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Establecer directorio de trabajo
 WORKDIR /var/www/html
 
-RUN mkdir -p storage/framework/sessions \
-    && mkdir -p storage/framework/views \
-    && mkdir -p storage/framework/cache/data \
-    && mkdir -p storage/logs \
-    && mkdir -p bootstrap/cache
-
 # Copiar archivos del proyecto
 COPY . .
 
