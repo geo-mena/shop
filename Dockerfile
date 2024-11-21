@@ -29,10 +29,6 @@ RUN composer install --no-scripts --optimize-autoloader
 RUN npm install
 RUN npm run dev
 
-# Crear volumen persistente para storage
-RUN mkdir -p /var/www/html/storage
-VOLUME /var/www/html/storage
-
 # Configurar enlace simbólico de storage
 RUN php artisan storage:link
 
