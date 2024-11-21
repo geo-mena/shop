@@ -10,9 +10,10 @@
     "require": {
         "php": "^8.1",
         "barryvdh/laravel-dompdf": "^2.0",
+        "cloudinary-labs/cloudinary-laravel": "^2.2",
+        "cloudinary/cloudinary_php": "^2.14",
         "guzzlehttp/guzzle": "^7.0",
         "intervention/image": "^2.7",
-        "jrm2k6/cloudder": "^0.7.0",
         "laravel/framework": "^10.0",
         "laravel/socialite": "^5.0",
         "laravel/tinker": "^2.0",
