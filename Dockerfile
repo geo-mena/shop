@@ -29,6 +29,16 @@ RUN composer install --no-scripts --optimize-autoloader
 RUN npm install
 RUN npm run dev
 
+# Añade estas líneas ANTES de RUN php artisan storage:link
+RUN mkdir -p /var/www/html/storage/framework/sessions \
+    && mkdir -p /var/www/html/storage/framework/views \
+    && mkdir -p /var/www/html/storage/framework/cache \
+    && mkdir -p /var/www/html/storage/logs
+
+# Configurar permisos
+RUN chmod -R 777 /var/www/html/storage
+RUN chown -R www-data:www-data /var/www/html/storage
+
 # Configurar enlace simbólico de storage
 RUN php artisan storage:link
 
@@ -41,8 +51,6 @@ RUN php artisan route:clear
 
 # Configurar permisos
 RUN chmod -R 777 storage bootstrap/cache
-RUN chmod -R 775 /var/www/html/storage
-RUN chown -R www-data:www-data /var/www/html/storage
 
 EXPOSE 80
 
