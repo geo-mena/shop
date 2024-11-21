@@ -21,25 +21,19 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Establecer directorio de trabajo
 WORKDIR /var/www/html
 
-# Copiar archivos del proyecto
-COPY . .
-
-# Crear directorios de storage antes de cualquier operación
 RUN mkdir -p storage/framework/sessions \
     && mkdir -p storage/framework/views \
-    && mkdir -p storage/framework/cache \
-    && mkdir -p storage/logs
+    && mkdir -p storage/framework/cache/data \
+    && mkdir -p storage/logs \
+    && mkdir -p bootstrap/cache
+
+# Copiar archivos del proyecto
+COPY . .
 
 # Instalar dependencias
 RUN composer install --no-scripts --optimize-autoloader
 RUN npm install
 RUN npm run dev
-
-# Configurar permisos
-RUN chmod -R 777 storage bootstrap/cache
-
-# Configurar enlace simbólico de storage
-RUN php artisan storage:link
 
 # Limpiar y regenerar caches
 RUN php artisan storage:link
@@ -47,6 +41,9 @@ RUN php artisan cache:clear
 RUN php artisan config:clear
 RUN php artisan view:clear
 RUN php artisan route:clear
+
+# Configurar permisos
+RUN chmod -R 777 storage bootstrap/cache
 
 EXPOSE 80
 
