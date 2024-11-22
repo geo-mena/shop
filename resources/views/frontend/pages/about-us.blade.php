@@ -30,19 +30,19 @@
 							@php
 								$settings=DB::table('settings')->get();
 							@endphp
-							<h3>Welcome To <span>Ecommerce Laravel</span></h3>
+							<h3>Welcome To <span>Shop Eiteck</span></h3>
 							<p>@foreach($settings as $data) {{$data->description}} @endforeach</p>
 							<div class="button">
-								<a href="{{route('blog')}}" class="btn">Our Blog</a>
+								{{-- <a href="{{route('blog')}}" class="btn">Our Blog</a> --}}
 								<a href="{{route('contact')}}" class="btn primary">Contact Us</a>
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-6 col-12">
 						<div class="about-img overlay">
-							<div class="button">
+							{{-- <div class="button">
 								<a href="https://www.youtube.com/watch?v=7edcgCdiHVU" class="video video-popup mfp-iframe"><i class="fa fa-play"></i></a>
-							</div>
+							</div> --}}
 							<img src="@foreach($settings as $data) {{$data->photo}} @endforeach" alt="@foreach($settings as $data) {{$data->photo}} @endforeach">
 						</div>
 					</div>
@@ -53,7 +53,7 @@
 
 
 	<!-- Start Shop Services Area -->
-	<section class="shop-services section">
+	<section class="shop-services section mb-5">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3 col-md-6 col-12">

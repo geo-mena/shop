@@ -17,14 +17,14 @@ class UsersTableSeeder extends Seeder
             array(
                 'name' => 'Geovanni Mena',
                 'email' => 'admin@mail.com',
-                'password' => Hash::make('admin123/*'),
+                'password' => Hash::make('admin2024'),
                 'role' => 'admin',
                 'status' => 'active'
             ),
             array(
                 'name' => 'Customer A',
                 'email' => 'customer@mail.com',
-                'password' => Hash::make('customer123/*'),
+                'password' => Hash::make('customer2024'),
                 'role' => 'user',
                 'status' => 'active'
             ),

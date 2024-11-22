@@ -106,11 +106,11 @@
 	<!--/ End Contact -->
 	
 	<!-- Map Section -->
-	{{-- <div class="map-section">
+	<div class="map-section">
 		<div id="myMap">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14130.857353934944!2d85.36529494999999!3d27.6952226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sne!2snp!4v1595323330171!5m2!1sne!2snp" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63836.67848516276!2d-78.47682389759908!3d-0.20650809638764694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d590ccbedd2525%3A0xe482fd5bbb0ee3bf!2sEl%20Potrero%20de%20San%20Luis%20Cumbaya!5e0!3m2!1sen!2sec!4v1732131556857!5m2!1sen!2sec" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 		</div>
-	</div> --}}
+	</div>
 	<!--/ End Map Section -->
 	
 	<!-- Start Shop Newsletter  -->
