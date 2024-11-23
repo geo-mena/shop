@@ -137,6 +137,15 @@ class FrontendController extends Controller
             $products->whereBetween('price',$price);
         }
 
+        if (!empty($_GET['size'])) {
+            $sizes = explode(',', $_GET['size']);
+            $products->where(function ($query) use ($sizes) {
+                foreach ($sizes as $size) {
+                    $query->orWhere('size', 'LIKE', '%' . $size . '%');
+                }
+            });
+        }
+
         $recent_products=Product::where('status','active')->orderBy('id','DESC')->limit(3)->get();
         // Sort by number
         if(!empty($_GET['show'])){
@@ -192,11 +201,23 @@ class FrontendController extends Controller
             if(!empty($data['price_range'])){
                 $priceRangeURL .='&price='.$data['price_range'];
             }
+
+            $sizeURL = "";
+            if (!empty($data['size'])) {
+                foreach ($data['size'] as $size) {
+                    if (empty($sizeURL)) {
+                        $sizeURL .= '&size=' . $size;
+                    } else {
+                        $sizeURL .= ',' . $size;
+                    }
+                }
+            }
+
             if(request()->is('e-shop.loc/product-grids')){
-                return redirect()->route('product-grids',$catURL.$brandURL.$priceRangeURL.$showURL.$sortByURL);
+                return redirect()->route('product-grids',$catURL.$brandURL.$priceRangeURL.$showURL.$sortByURL.$sizeURL);
             }
             else{
-                return redirect()->route('product-lists',$catURL.$brandURL.$priceRangeURL.$showURL.$sortByURL);
+                return redirect()->route('product-lists',$catURL.$brandURL.$priceRangeURL.$showURL.$sortByURL.$sizeURL);
             }
     }
     public function productSearch(Request $request){
