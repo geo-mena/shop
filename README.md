@@ -12,11 +12,12 @@
     <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap">
 </div>
 <hr>
-Este proyecto en PHP Laravel presenta una atractiva exhibición de productos nuevos, destacados y populares. Los usuarios pueden navegar por una selección ordenada de los mejores productos, organizados en categorías para facilitar su exploración.
 
-Ya sea moda para hombres, ropa para mujeres u otras categorías, los clientes pueden encontrar fácilmente productos según sus preferencias gracias a opciones específicas de clasificación y navegación por categorías. Las categorías son gestionadas por el administrador y pueden adaptarse según las necesidades.
+This PHP Laravel project features an attractive showcase of new, featured, and popular products. Users can browse through a curated selection of top products, organized into categories for easy exploration. 
 
-Cada producto muestra tanto su precio original como el precio con descuento, lo que mejora la experiencia de compra. El sitio web ofrece todas estas secciones para que los usuarios puedan navegar y descubrir nuevos productos de interés.
+Whether it’s men’s fashion, women’s clothing, or other categories, customers can effortlessly find products tailored to their preferences, thanks to specific sorting options and category navigation. Categories are managed by the admin and can be adjusted as needed.
+
+Each product displays both its original price and the discounted price, enhancing the shopping experience. The website provides all these sections to allow users to navigate and discover new products of interest.
 
 ## Tabla de Contenidos
 
