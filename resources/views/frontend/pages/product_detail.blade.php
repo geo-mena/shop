@@ -14,7 +14,7 @@
 	<meta property="og:image" content="{{$product_detail->photo}}">
 	<meta property="og:description" content="{{$product_detail->description}}">
 @endsection
-@section('title','Shop Eiteck | PRODUCT DETAIL')
+@section('title','Shop 1.0 | PRODUCT DETAIL')
 @section('main-content')
 
 		<!-- Breadcrumbs -->

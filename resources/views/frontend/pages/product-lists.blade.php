@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 
-@section('title','Shop Eiteck | PRODUCT PAGE')
+@section('title','Shop 1.0 | PRODUCT PAGE')
 
 @section('main-content')
 	

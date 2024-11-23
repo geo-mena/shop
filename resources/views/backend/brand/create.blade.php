@@ -1,5 +1,5 @@
 @extends('backend.layouts.master')
-@section('title','Shop Eiteck | Brand Create')
+@section('title','Shop 1.0 | Brand Create')
 @section('main-content')
 
 <div class="card">

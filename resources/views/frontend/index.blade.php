@@ -1,5 +1,5 @@
 @extends('frontend.layouts.master')
-@section('title','Shop Eiteck | HOME PAGE')
+@section('title','Shop 1.0 | HOME PAGE')
 @section('main-content')
 <!-- Slider Area -->
 @if(count($banners)>0)

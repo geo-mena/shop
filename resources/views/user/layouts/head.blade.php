@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Shop Eiteck | DASHBOARD</title>
+    <title>Shop 1.0 | DASHBOARD</title>
   
     <!-- Custom fonts for this template-->
     <link rel="icon" type="image/png" href="{{ asset('images/cart.png') }}">
