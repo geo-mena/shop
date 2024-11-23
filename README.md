@@ -1,5 +1,5 @@
 <h1 align="center">
-    SHOP
+    SHOPPING
 </h1>
 
 <div align="center">
