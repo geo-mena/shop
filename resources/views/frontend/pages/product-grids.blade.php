@@ -21,7 +21,7 @@
     <!-- End Breadcrumbs -->
 
     <!-- Product Style -->
-    <form action="{{route('shop.filter')}}" method="POST">
+    <form action="{{route('shop.filter')}}" method="POST"  id="filter-form">
         @csrf
         <section class="product-area shop-sidebar shop section">
             <div class="container">
@@ -123,6 +123,34 @@
                                     </ul>
                                 </div>
                                 <!--/ End Single Widget -->
+                                <!-- Single Widget -->
+								<div class="single-widget size">
+									<h3 class="title">Filter by Size</h3>
+									<ul class="categor-list">
+										@php
+											$sizes = DB::table('products')->select('size')->distinct()->get();
+											$uniqueSizes = collect();
+											foreach ($sizes as $size) {
+												if ($size->size) {
+													$sizeArray = explode(',', $size->size);
+													foreach ($sizeArray as $s) {
+														if (!$uniqueSizes->contains($s)) {
+															$uniqueSizes->push($s);
+														}
+													}
+												}
+											}
+											$uniqueSizes = $uniqueSizes->take(5);
+										@endphp
+										@foreach($uniqueSizes as $s)
+											<li>
+												<input type="checkbox" name="size[]" value="{{$s}}" @if(!empty($_GET['size']) && in_array($s, explode(',', $_GET['size']))) checked @endif class="size-filter">
+												<label>{{$s}}</label>
+											</li>
+										@endforeach
+									</ul>
+								</div>
+								<!--/ End Single Widget -->
                         </div>
                     </div>
                     <div class="col-lg-9 col-md-8 col-12">
@@ -449,4 +477,13 @@
             }
         })
     </script>
+    <script>
+		document.addEventListener('DOMContentLoaded', function() {
+			document.querySelectorAll('.size-filter').forEach(function(checkbox) {
+				checkbox.addEventListener('change', function() {
+					document.getElementById('filter-form').submit();
+				});
+			});
+		});
+	</script>
 @endpush
