@@ -1,5 +1,5 @@
 <h1 align="center">
-    SHOP EITECK
+    SHOP
 </h1>
 
 <div align="center">
