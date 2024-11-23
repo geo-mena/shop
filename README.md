@@ -1,4 +1,4 @@
-<h1 align="center
+<h1 align="center">
     SHOP - System of Online Products
 </h1>
 
@@ -55,6 +55,13 @@ Each product displays both its original price and the discounted price, enhancin
 -   Notification for Admin
 -   Earnings Overview
 -   Profile Settings
+
+## Prerequisites
+
+-   PHP >= 7.4
+-   Node.js >= 12.x
+-   Composer
+-   MySQL
 
 ## Installation
 
