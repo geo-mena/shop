@@ -1,5 +1,5 @@
-<h1 align="center">
-    SHOPPING
+<h1 align="center
+    SHOP - System of Online Products
 </h1>
 
 <div align="center">
@@ -13,132 +13,131 @@
 </div>
 <hr>
 
-This PHP Laravel project features an attractive showcase of new, featured, and popular products. Users can browse through a curated selection of top products, organized into categories for easy exploration. 
+This PHP Laravel project features an attractive showcase of new, featured, and popular products. Users can browse through a curated selection of top products, organized into categories for easy exploration.
 
 Whether it’s men’s fashion, women’s clothing, or other categories, customers can effortlessly find products tailored to their preferences, thanks to specific sorting options and category navigation. Categories are managed by the admin and can be adjusted as needed.
 
 Each product displays both its original price and the discounted price, enhancing the shopping experience. The website provides all these sections to allow users to navigate and discover new products of interest.
 
-## Tabla de Contenidos
+## Table of Contents
 
--   [Características](#características)
--   [Instalación](#instalación)
--   [Configuración](#configuración)
--   [Uso](#uso)
--   [Despliegue](#despliegue)
--   [Licencia](#licencia)
+-   [features](#features)
+-   [Installation](#installation)
+-   [Usage](#usage)
+-   [Deployment](#deployment)
+-   [License](#license)
 
-## Características
+## Features
 
--   Panel de Cliente
--   Panel de Administrador
--   Productos Destacados y Principales
--   Filtro de Productos
--   Descuentos en Productos
--   Código de Cupón
--   Agregar al Carrito
--   Agregar a Lista de Deseos
--   Sistema de Seguimiento de Pedidos
--   Ver Pedido
--   Calificar y Reseñar Productos
--   Gestión de Medios y Banner
--   Gestión de Categorías de Productos
--   Gestión de Productos
--   Gestión de Pedidos
--   Gestión de Marcas y Envíos X
--   Gestor de Carga: Archivos Multimedia
--   Configuración del Sitio Web
--   Gestión de Usuarios
--   Gestión de Cupones
--   Gestión de Reseñas y Comentarios
--   Notificaciones para Administrador
--   Resumen de Ganancias
--   Configuración de Perfil
+-   Customer Panel
+-   Admin Panel
+-   Top, Featured Products
+-   Product Filter
+-   Product Discounts
+-   Coupon Code
+-   Add to Cart
+-   Add to Wish List
+-   Order Tracking System
+-   View Order
+-   View Blogs
+-   Comment on Blogs
+-   Rate and Review Products
+-   Manage Media, Banner
+-   Product Category Management
+-   Product Management
+-   Order Management
+-   Product Brand and Shipping Management
+-   Upload Manager: Media Files
+-   Website Settings
+-   User Management
+-   Coupon Management
+-   Review and Comments Management
+-   Notification for Admin
+-   Earnings Overview
+-   Profile Settings
 
-## Instalación
+## Installation
 
-1. Clonar el repositorio:
-
-    ```bash
-    git clone https://github.com/eitecknologia/shop-eiteck.git
-    ```
-
-2. Acceder al directorio del proyecto:
+1. Clone the repository:
 
     ```bash
-    cd shop-eiteck
+    git clone https://github.com/geo-mena/shop.git
     ```
 
-## Configuración
+2. Navigate to the project directory:
 
-1.  Abre la carpeta del proyecto, verifica que exista el archivo `.env` y actualiza las credenciales de la base de datos.
-2.  Crea una base de datos MySQL con el nombre especificado en el archivo `.env`.
-3.  Abre el proyecto en el **Terminal o en el Símbolo del Sistema.**
-4.  Instala los paquetes de Node.js:
+    ```bash
+    cd shop
+    ```
+
+3. Open the project folder, check for the `.env` file, and update the database credentials.
+4. Create a MySQL database with the name provided inside the `.env` file.
+5. Then, open the project in the **Terminal or Command Prompt.**
+6. Install the Node.js dependencies:
     ```bash
     npm install
     ```
-5.  Instala las dependencias de Composer:
+7. Install the Composer dependencies:
     ```bash
     composer install
     ```
-6.  Vincula el almacenamiento:
+8. Create a symbolic link to the storage folder:
     ```bash
     php artisan storage:link
     ```
-7.  Para configurar la base de datos, puedes importar el archivo SQL proporcionado o iniciar una nueva configuración siguiendo los comandos a continuación.
-8.  Migra las tablas:
+9. For the database, you can either import the given SQL file or start a new one following the command lines.
+10. Now migrate the tables:
     ```bash
     php artisan migrate
     ```
-9.  Ejecuta los seeders:
+11. Run seeder:
     ```bash
     php artisan db:seed
     ```
-10. Genera la clave de la aplicación:
+12. Then generate the key:
     ```bash
     php artisan key:generate
     ```
 
-## Uso
+## Usage
 
-1.  Inicia el servidor:
+1.  To start the server:
     ```bash
     php artisan serve
     ```
-2.  Abre tu navegador y accede a la dirección `http://localhost:8000`.
+2.  Open the browser and navigate to `http://localhost:8000` to view the project.
 
-## Despliegue
+## Deployment
 
-1.  Para compilar los activos:
+1.  To compile the assets:
     ```bash
     npm run dev
     ```
-2.  Para compilar los activos en producción:
+2.  To compile the assets for production:
     ```bash
     npm run prod
     ```
-3.  Para limpiar la caché de configuración:
+3.  To clear the configuration cache:
     ```bash
     php artisan config:clear
     ```
-4.  Para limpiar la caché de rutas:
+4.  To clear the route cache:
     ```bash
     php artisan route:clear
     ```
-5.  Para limpiar la caché de vistas:
+5.  To clear the view cache:
     ```bash
     php artisan view:clear
     ```
-6.  Para limpiar la caché de configuración y rutas:
+6.  To clear the configuration and route cache:
     ```bash
     php artisan cache:clear
     ```
-7.  Para limpiar la caché de configuración, rutas y vistas:
+7.  To clear the configuration, route, and view cache:
     ```bash
     php artisan optimize:clear
     ```
 
-## Licencia
+## License
 
-Este proyecto está bajo la licencia MIT. Consulta el archivo [MIT license](https://opensource.org/licenses/MIT) para más detalles.
+This project is licensed under the MIT License. See the [MIT license](https://opensource.org/licenses/MIT) for more details.
