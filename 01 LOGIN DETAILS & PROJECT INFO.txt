@@ -12,10 +12,10 @@ Email   : admin@mail.com
 Password: admin2024
 
 --Customer Login Details---
+
 Email   : customer@mail.com
 Password: customer2024
 
--- Password: codeastro.com--
 
 
 **Check the Website's Post Page for all the Installation Instructions**
