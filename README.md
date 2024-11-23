@@ -72,7 +72,7 @@ Each product displays both its original price and the discounted price, enhancin
 
 3. Open the project folder, check for the `.env` file, and update the database credentials.
 4. Create a MySQL database with the name provided inside the `.env` file.
-5. Then, open the project in the **Terminal or Command Prompt.**
+5. Then, open the project in the *Terminal or Command Prompt.*
 6. Install the Node.js dependencies:
     ```bash
     npm install
