@@ -23,6 +23,7 @@ Each product displays both its original price and the discounted price, enhancin
 
 -   [features](#features)
 -   [Installation](#installation)
+-   [Prerequisites](#prerequisites)
 -   [Usage](#usage)
 -   [Deployment](#deployment)
 -   [License](#license)
