@@ -1,7 +1,6 @@
-**Log on to codeastro.com for more projects!***
 
 
-**Developed by Prajwal Rai**
+**Developed by Geovanni Mena**
 
 
 **Check the Website's Post Page for all the Installation Instructions**
@@ -10,13 +9,12 @@
 ---Admin Login Details---
 
 Email   : admin@mail.com
-Password: codeastro.com
+Password: admin2024
 
 --Customer Login Details---
+
 Email   : customer@mail.com
-Password: codeastro.com
+Password: customer2024
 
 
 **Check the Website's Post Page for all the Installation Instructions**
-
-
