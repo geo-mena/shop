@@ -23,6 +23,7 @@ Each product displays both its original price and the discounted price, enhancin
 
 -   [features](#features)
 -   [Installation](#installation)
+-   [Prerequisites](#prerequisites)
 -   [Usage](#usage)
 -   [Deployment](#deployment)
 -   [License](#license)
@@ -58,8 +59,8 @@ Each product displays both its original price and the discounted price, enhancin
 
 ## Prerequisites
 
--   PHP >= 7.4
--   Node.js >= 12.x
+-   PHP >= 8.3
+-   Node.js >= 18.0
 -   Composer
 -   MySQL
 
