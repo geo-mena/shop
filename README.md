@@ -1,143 +1,176 @@
-<h1 align="center">
-    SHOP EITECK
-</h1>
+<div align="center">
+  <!-- <a href="https://slug.vercel.app">
+    <img
+      src="/public/images/banner.png"
+      alt="Slug Logo"
+    />
+  </a> -->
+  <p>
+    <b style="font-size: 1.5rem">
+      SHOP - System of Online Products
+    </b>
+  </p>
+
+<!-- <a href="https://slug.vercel.app/dashboard">Dashboard</a>
+<span>&nbsp;&nbsp;❖&nbsp;&nbsp;</span>
+<a href="#-roadmap">Roadmap</a>
+<span>&nbsp;&nbsp;❖&nbsp;&nbsp;</span>
+<a href="#-getting-started">Contribute</a>
+<span>&nbsp;&nbsp;❖&nbsp;&nbsp;</span>
+<a href="https://github.com/pheralb/slug/issues/new/choose">Create issue</a>
+<span>&nbsp;&nbsp;❖&nbsp;&nbsp;</span>
+<a href="https://twitter.com/pheralb_">X/Twitter</a> -->
 
 <div align="center">
-    <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP">
-    <img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel">
-    <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
-    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
-    <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js">
-    <img src="https://img.shields.io/badge/Composer-885630?style=for-the-badge&logo=composer&logoColor=white" alt="Composer">
-    <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap">
+    <img src="public/images/frame.png">
+    </a>
+    <p></p>
 </div>
-<hr>
-Este proyecto en PHP Laravel presenta una atractiva exhibición de productos nuevos, destacados y populares. Los usuarios pueden navegar por una selección ordenada de los mejores productos, organizados en categorías para facilitar su exploración.
 
-Ya sea moda para hombres, ropa para mujeres u otras categorías, los clientes pueden encontrar fácilmente productos según sus preferencias gracias a opciones específicas de clasificación y navegación por categorías. Las categorías son gestionadas por el administrador y pueden adaptarse según las necesidades.
+![Docker Badge](https://shields.io/badge/-Docker-2496ED?style=flat&logo=docker)
+![Laravel Badge](https://img.shields.io/badge/Laravel-2e2e2e?logo=laravel)
+![PHP Badge](https://shields.io/badge/-PHP-3776AB?style=flat&logo=php)
+![Redis Badge](https://shields.io/badge/-Redis-DC382D?style=flat&logo=redis)
+![JavaScript Badge](https://shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript)
+![GitHub license](https://img.shields.io/github/license/geo-mena/shop)
 
-Cada producto muestra tanto su precio original como el precio con descuento, lo que mejora la experiencia de compra. El sitio web ofrece todas estas secciones para que los usuarios puedan navegar y descubrir nuevos productos de interés.
+</div>
 
-## Tabla de Contenidos
+This PHP Laravel project features an attractive showcase of new, featured, and popular products. Users can browse through a curated selection of top products, organized into categories for easy exploration.
 
--   [Características](#características)
--   [Instalación](#instalación)
--   [Configuración](#configuración)
--   [Uso](#uso)
--   [Despliegue](#despliegue)
--   [Licencia](#licencia)
+Whether it’s men’s fashion, women’s clothing, or other categories, customers can effortlessly find products tailored to their preferences, thanks to specific sorting options and category navigation. Categories are managed by the admin and can be adjusted as needed.
 
-## Características
+Each product displays both its original price and the discounted price, enhancing the shopping experience. The website provides all these sections to allow users to navigate and discover new products of interest.
 
--   Panel de Cliente
--   Panel de Administrador
--   Productos Destacados y Principales
--   Filtro de Productos
--   Descuentos en Productos
--   Código de Cupón
--   Agregar al Carrito
--   Agregar a Lista de Deseos
--   Sistema de Seguimiento de Pedidos
--   Ver Pedido
--   Calificar y Reseñar Productos
--   Gestión de Medios y Banner
--   Gestión de Categorías de Productos
--   Gestión de Productos
--   Gestión de Pedidos
--   Gestión de Marcas y Envíos X
--   Gestor de Carga: Archivos Multimedia
--   Configuración del Sitio Web
--   Gestión de Usuarios
--   Gestión de Cupones
--   Gestión de Reseñas y Comentarios
--   Notificaciones para Administrador
--   Resumen de Ganancias
--   Configuración de Perfil
+<hr />
 
-## Instalación
+## 📄 Table of Contents
 
-1. Clonar el repositorio:
+-   [features](#features)
+-   [Installation](#installation)
+-   [Prerequisites](#prerequisites)
+-   [Usage](#usage)
+-   [Deployment](#deployment)
+-   [License](#license)
+
+## 🎉 Features
+
+-   Customer Panel
+-   Admin Panel
+-   Top, Featured Products
+-   Product Filter
+-   Product Discounts
+-   Coupon Code
+-   Add to Cart
+-   Add to Wish List
+-   Order Tracking System
+-   View Order
+-   View Blogs
+-   Comment on Blogs
+-   Rate and Review Products
+-   Manage Media, Banner
+-   Product Category Management
+-   Product Management
+-   Order Management
+-   Product Brand and Shipping Management
+-   Upload Manager: Media Files
+-   Website Settings
+-   User Management
+-   Coupon Management
+-   Review and Comments Management
+-   Notification for Admin
+-   Earnings Overview
+-   Profile Settings
+
+## 📋 Prerequisites
+
+-   PHP >= 8.3
+-   Node.js >= 18.0
+-   Composer
+-   MySQL
+
+## 🌱 Installation
+
+1. Clone the repository:
 
     ```bash
-    git clone https://github.com/eitecknologia/shop-eiteck.git
+    git clone https://github.com/geo-mena/shop.git
     ```
 
-2. Acceder al directorio del proyecto:
+2. Navigate to the project directory:
 
     ```bash
-    cd shop-eiteck
+    cd shop
     ```
 
-## Configuración
-
-1.  Abre la carpeta del proyecto, verifica que exista el archivo `.env` y actualiza las credenciales de la base de datos.
-2.  Crea una base de datos MySQL con el nombre especificado en el archivo `.env`.
-3.  Abre el proyecto en el **Terminal o en el Símbolo del Sistema.**
-4.  Instala los paquetes de Node.js:
+3. Open the project folder, check for the `.env` file, and update the database credentials.
+4. Create a MySQL database with the name provided inside the `.env` file.
+5. Then, open the project in the _Terminal or Command Prompt._
+6. Install the Node.js dependencies:
     ```bash
     npm install
     ```
-5.  Instala las dependencias de Composer:
+7. Install the Composer dependencies:
     ```bash
     composer install
     ```
-6.  Vincula el almacenamiento:
+8. Create a symbolic link to the storage folder:
     ```bash
     php artisan storage:link
     ```
-7.  Para configurar la base de datos, puedes importar el archivo SQL proporcionado o iniciar una nueva configuración siguiendo los comandos a continuación.
-8.  Migra las tablas:
+9. For the database, you can either import the given SQL file or start a new one following the command lines.
+10. Now migrate the tables:
     ```bash
     php artisan migrate
     ```
-9.  Ejecuta los seeders:
+11. Run seeder:
     ```bash
     php artisan db:seed
     ```
-10. Genera la clave de la aplicación:
+12. Then generate the key:
     ```bash
     php artisan key:generate
     ```
 
-## Uso
+## ⚡️ Usage
 
-1.  Inicia el servidor:
+1.  To start the server:
     ```bash
     php artisan serve
     ```
-2.  Abre tu navegador y accede a la dirección `http://localhost:8000`.
+2.  Open the browser and navigate to `http://localhost:8000` to view the project.
 
-## Despliegue
+## 🚀 Deployment
 
-1.  Para compilar los activos:
+1.  To compile the assets:
     ```bash
     npm run dev
     ```
-2.  Para compilar los activos en producción:
+2.  To compile the assets for production:
     ```bash
     npm run prod
     ```
-3.  Para limpiar la caché de configuración:
+3.  To clear the configuration cache:
     ```bash
     php artisan config:clear
     ```
-4.  Para limpiar la caché de rutas:
+4.  To clear the route cache:
     ```bash
     php artisan route:clear
     ```
-5.  Para limpiar la caché de vistas:
+5.  To clear the view cache:
     ```bash
     php artisan view:clear
     ```
-6.  Para limpiar la caché de configuración y rutas:
+6.  To clear the configuration and route cache:
     ```bash
     php artisan cache:clear
     ```
-7.  Para limpiar la caché de configuración, rutas y vistas:
+7.  To clear the configuration, route, and view cache:
     ```bash
     php artisan optimize:clear
     ```
 
-## Licencia
+## 📜 License
 
-Este proyecto está bajo la licencia MIT. Consulta el archivo [MIT license](https://opensource.org/licenses/MIT) para más detalles.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) for more details.
