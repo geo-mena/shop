@@ -42,8 +42,6 @@ Whether it’s men’s fashion, women’s clothing, or other categories, custome
 
 Each product displays both its original price and the discounted price, enhancing the shopping experience. The website provides all these sections to allow users to navigate and discover new products of interest.
 
-<hr />
-
 ## 📄 Table of Contents
 
 -   [features](#features)
