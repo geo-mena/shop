@@ -44,7 +44,7 @@ Each product displays both its original price and the discounted price, enhancin
 
 ## 📄 Table of Contents
 
--   [features](#features)
+-   [Features](#features)
 -   [Installation](#installation)
 -   [Prerequisites](#prerequisites)
 -   [Usage](#usage)
