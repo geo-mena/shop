@@ -1,17 +1,40 @@
-<h1 align="center">
-    SHOP - System of Online Products
-</h1>
+<div align="center">
+  <!-- <a href="https://slug.vercel.app">
+    <img
+      src="/public/images/banner.png"
+      alt="Slug Logo"
+    />
+  </a> -->
+  <p>
+    <b style="font-size: 1.5rem">
+      SHOP - System of Online Products
+    </b>
+  </p>
+
+<!-- <a href="https://slug.vercel.app/dashboard">Dashboard</a>
+<span>&nbsp;&nbsp;❖&nbsp;&nbsp;</span>
+<a href="#-roadmap">Roadmap</a>
+<span>&nbsp;&nbsp;❖&nbsp;&nbsp;</span>
+<a href="#-getting-started">Contribute</a>
+<span>&nbsp;&nbsp;❖&nbsp;&nbsp;</span>
+<a href="https://github.com/pheralb/slug/issues/new/choose">Create issue</a>
+<span>&nbsp;&nbsp;❖&nbsp;&nbsp;</span>
+<a href="https://twitter.com/pheralb_">X/Twitter</a> -->
 
 <div align="center">
-    <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP">
-    <img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel">
-    <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
-    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
-    <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js">
-    <img src="https://img.shields.io/badge/Composer-885630?style=for-the-badge&logo=composer&logoColor=white" alt="Composer">
-    <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap">
+    <img src="public/images/frame.png">
+    </a>
+    <p></p>
 </div>
-<hr>
+
+![Docker Badge](https://shields.io/badge/-Docker-2496ED?style=flat&logo=docker)
+![Laravel Badge](https://img.shields.io/badge/Laravel-2e2e2e?logo=laravel)
+![PHP Badge](https://shields.io/badge/-PHP-3776AB?style=flat&logo=php)
+![Redis Badge](https://shields.io/badge/-Redis-DC382D?style=flat&logo=redis)
+![JavaScript Badge](https://shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript)
+![GitHub license](https://img.shields.io/github/license/geo-mena/shop)
+
+</div>
 
 This PHP Laravel project features an attractive showcase of new, featured, and popular products. Users can browse through a curated selection of top products, organized into categories for easy exploration.
 
@@ -19,7 +42,9 @@ Whether it’s men’s fashion, women’s clothing, or other categories, custome
 
 Each product displays both its original price and the discounted price, enhancing the shopping experience. The website provides all these sections to allow users to navigate and discover new products of interest.
 
-## Table of Contents
+<hr />
+
+## 📄 Table of Contents
 
 -   [features](#features)
 -   [Installation](#installation)
@@ -28,7 +53,7 @@ Each product displays both its original price and the discounted price, enhancin
 -   [Deployment](#deployment)
 -   [License](#license)
 
-## Features
+## 🎉 Features
 
 -   Customer Panel
 -   Admin Panel
@@ -57,14 +82,14 @@ Each product displays both its original price and the discounted price, enhancin
 -   Earnings Overview
 -   Profile Settings
 
-## Prerequisites
+## 📋 Prerequisites
 
 -   PHP >= 8.3
 -   Node.js >= 18.0
 -   Composer
 -   MySQL
 
-## Installation
+## 🌱 Installation
 
 1. Clone the repository:
 
@@ -107,7 +132,7 @@ Each product displays both its original price and the discounted price, enhancin
     php artisan key:generate
     ```
 
-## Usage
+## ⚡️ Usage
 
 1.  To start the server:
     ```bash
@@ -115,7 +140,7 @@ Each product displays both its original price and the discounted price, enhancin
     ```
 2.  Open the browser and navigate to `http://localhost:8000` to view the project.
 
-## Deployment
+## 🚀 Deployment
 
 1.  To compile the assets:
     ```bash
@@ -145,7 +170,7 @@ Each product displays both its original price and the discounted price, enhancin
     ```bash
     php artisan optimize:clear
     ```
+    
+## 📜 License
 
-## License
-
-This project is licensed under the MIT License. See the [MIT license](https://opensource.org/licenses/MIT) for more details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) for more details.
