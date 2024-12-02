@@ -6,7 +6,7 @@
     />
   </a> -->
   <p>
-    <b style="font-size: 1.5rem">
+    <h2>
       SHOP - System of Online Products
     </b>
   </p>
@@ -41,6 +41,15 @@ This PHP Laravel project features an attractive showcase of new, featured, and p
 Whether it’s men’s fashion, women’s clothing, or other categories, customers can effortlessly find products tailored to their preferences, thanks to specific sorting options and category navigation. Categories are managed by the admin and can be adjusted as needed.
 
 Each product displays both its original price and the discounted price, enhancing the shopping experience. The website provides all these sections to allow users to navigate and discover new products of interest.
+
+## 📄 Table of Contents
+
+-   [Features](#features)
+-   [Installation](#installation)
+-   [Prerequisites](#prerequisites)
+-   [Usage](#usage)
+-   [Deployment](#deployment)
+-   [License](#license)
 
 ## 🎉 Features
 
@@ -94,7 +103,7 @@ Each product displays both its original price and the discounted price, enhancin
 
 3. Open the project folder, check for the `.env` file, and update the database credentials.
 4. Create a MySQL database with the name provided inside the `.env` file.
-5. Then, open the project in the _Terminal or Command Prompt._
+5. Then, open the project in the *Terminal or Command Prompt.*
 6. Install the Node.js dependencies:
     ```bash
     npm install
@@ -159,7 +168,7 @@ Each product displays both its original price and the discounted price, enhancin
     ```bash
     php artisan optimize:clear
     ```
-
+    
 ## 📜 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) for more details.

@@ -8,9 +8,9 @@
 					<div class="col-lg-5 col-md-6 col-12">
 						<!-- Single Widget -->
 						<div class="single-footer about">
-							<div class="logo">
+							{{-- <div class="logo">
 								<a href="index.html"><img src="{{asset('backend/img/avatar.png')}}" alt="#"></a>
-							</div>
+							</div> --}}
 							@php
 								$settings=DB::table('settings')->get();
 							@endphp
