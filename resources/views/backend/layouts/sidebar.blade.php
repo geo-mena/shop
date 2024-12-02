@@ -132,10 +132,10 @@
 
     <!-- Divider -->
     <!-- Visit 'codeastro' for more projects -->
-    {{-- <hr class="sidebar-divider"> --}}
+    <hr class="sidebar-divider">
 
     <!-- Heading -->
-    {{-- <div class="sidebar-heading">
+    <div class="sidebar-heading">
       Posts
     </div>
 
@@ -190,8 +190,7 @@
             <i class="fas fa-comments fa-chart-area"></i>
             <span>Comments</span>
         </a>
-      </li> --}}
-
+      </li>
 
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">

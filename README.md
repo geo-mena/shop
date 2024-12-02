@@ -105,7 +105,7 @@ Each product displays both its original price and the discounted price, enhancin
 
 3. Open the project folder, check for the `.env` file, and update the database credentials.
 4. Create a MySQL database with the name provided inside the `.env` file.
-5. Then, open the project in the _Terminal or Command Prompt._
+5. Then, open the project in the *Terminal or Command Prompt.*
 6. Install the Node.js dependencies:
     ```bash
     npm install
@@ -170,7 +170,7 @@ Each product displays both its original price and the discounted price, enhancin
     ```bash
     php artisan optimize:clear
     ```
-
+    
 ## 📜 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) for more details.

@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 
-@section('title','Shop Eiteck | Login Page')
+@section('title','Shop 1.0 | Login Page')
 
 @section('main-content')
     <!-- Breadcrumbs -->
