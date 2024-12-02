@@ -6,7 +6,7 @@
     />
   </a> -->
   <p>
-    <b style="font-size: 1.5rem">
+    <h2>
       SHOP - System of Online Products
     </b>
   </p>
